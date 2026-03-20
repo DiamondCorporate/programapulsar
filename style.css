@@ -1,7 +1,7 @@
 /* Reset básico */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
-:root { --top-offset: 180px; }   /* altura compensada do topo fixo */
+:root { --top-offset: 145px; }   /* altura compensada do topo fixo */
 
 html { scroll-behavior: smooth; }
 
