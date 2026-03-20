@@ -39,7 +39,7 @@ header h1, .slim-header h1 { font-size: 1.1rem; color: #00aaff; margin: 0; paddi
 
 .hero-flex {
   position: relative;
-  background: url('img/fundo-hero.png') center center / cover no-repeat;
+  background: url('fundo-hero.png') center center / cover no-repeat;
   padding: 24px 0 18px;
   min-height: auto;
   overflow: hidden;
@@ -84,7 +84,7 @@ button:hover { background: #008ecc; }
 @keyframes bounce { 0%,20%,50%,80%,100%{transform:translateY(0)} 40%{transform:translateY(-4px)} 60%{transform:translateY(-2px)} }
 
 /* ===== Quem Somos ===== */
-.sobre-com-fundo { background: url('img/bg-sobre.jpg') center center / cover no-repeat; padding: 56px 20px 72px; color: #000; }
+.sobre-com-fundo { background: url('bg-sobre.jpg') center center / cover no-repeat; padding: 56px 20px 72px; color: #000; }
 .sobre-grid { display: flex; flex-wrap: wrap; gap: 32px; align-items: flex-start; }
 .sobre-texto { flex: 1 1 55%; }
 .sobre-texto h3 { color: #ffffff; margin-bottom: 12px; font-size: 1.4rem; }
