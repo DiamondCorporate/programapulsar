@@ -1194,3 +1194,17 @@ padding-top: clamp(100px, 15vh, 180px);
     line-height: 1.55;
   }
 }
+/* Título da seção Resultados */
+#resultados h2 {
+  color: #000000;
+}
+
+/* Subtítulo da seção */
+#resultados p {
+  color: #111111;
+}
+
+/* Títulos dos cards */
+#resultados .metric-card h3 {
+  color: #000000;
+}
