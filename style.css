@@ -461,7 +461,6 @@ button:hover { background: #008ecc; }
 /* ===== Metodologia ===== */
 .giro360-section {
   background:
-    linear-gradient(135deg, rgba(0, 43, 64, 0.58), rgba(0, 78, 115, 0.52)),
     url('fundo-hero.png') center center / cover no-repeat;
   color: #ffffff;
   padding: 80px 20px;
