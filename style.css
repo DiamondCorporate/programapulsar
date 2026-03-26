@@ -1057,3 +1057,141 @@ padding-top: clamp(100px, 15vh, 180px);
   margin-bottom: 10px;
   color: #eaeaea;
 }
+/* ===== Desafio expandido ===== */
+.services-expanded {
+  text-align: center;
+}
+
+.problem-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 28px auto 0;
+  max-width: 980px;
+}
+
+.problem-list li {
+  font-size: 1rem;
+  margin: 8px auto;
+  padding: 12px 16px;
+  background: #000;
+  border-left: 4px solid #00aaff;
+  max-width: 860px;
+  color: #f1f1f1;
+  display: block;
+  width: 100%;
+  line-height: 1.45;
+}
+
+.problem-transition {
+  max-width: 920px;
+  margin: 34px auto 28px;
+  text-align: center;
+}
+
+.problem-transition p {
+  font-size: 1.08rem;
+  line-height: 1.7;
+  color: #eef7ff;
+}
+
+.problem-transition strong {
+  color: #ffffff;
+}
+
+.problem-impact-grid {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 26px;
+  align-items: stretch;
+}
+
+.problem-impact-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: 18px;
+  padding: 28px 26px;
+  text-align: left;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.18);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.problem-impact-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.22);
+  border-color: rgba(255,255,255,0.18);
+}
+
+.problem-impact-card h3 {
+  font-size: 1.35rem;
+  margin-bottom: 18px;
+  color: #ffffff;
+}
+
+.problem-impact-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.problem-impact-card li {
+  position: relative;
+  padding-left: 18px;
+  margin-bottom: 14px;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #eef7ff;
+}
+
+.problem-impact-card li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #00aaff;
+  font-weight: bold;
+}
+
+/* responsivo */
+@media (max-width: 900px) {
+  .problem-impact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .problem-list {
+    margin-top: 22px;
+  }
+
+  .problem-list li {
+    font-size: 0.95rem;
+    padding: 12px 14px;
+    line-height: 1.4;
+  }
+
+  .problem-transition {
+    margin: 26px auto 22px;
+  }
+
+  .problem-transition p {
+    font-size: 0.98rem;
+    line-height: 1.65;
+  }
+
+  .problem-impact-card {
+    padding: 22px 20px;
+    border-radius: 14px;
+  }
+
+  .problem-impact-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .problem-impact-card li {
+    font-size: 0.95rem;
+    line-height: 1.55;
+  }
+}
