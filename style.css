@@ -1208,3 +1208,14 @@ padding-top: clamp(100px, 15vh, 180px);
 #resultados .metric-card h3 {
   color: #000000;
 }
+.result-title {
+  color: #000000;
+}
+
+.result-subtitle {
+  color: #1a1a1a;
+}
+
+.metric-card h3 {
+  color: #000000;
+}
