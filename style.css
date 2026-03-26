@@ -1028,3 +1028,32 @@ padding-top: clamp(100px, 15vh, 180px);
     line-height: 1.6;
   }
 }
+.ciclo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.ciclo-col {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(8px);
+  border-radius: 16px;
+  padding: 30px;
+  text-align: left;
+}
+
+.ciclo-col h3 {
+  color: #00bfff;
+  margin-bottom: 15px;
+}
+
+.ciclo-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.ciclo-col li {
+  margin-bottom: 10px;
+  color: #eaeaea;
+}
