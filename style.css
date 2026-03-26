@@ -1218,3 +1218,37 @@ padding-top: clamp(100px, 15vh, 180px);
 .metric-card h3 {
   color: #000000;
 }
+.sobre-com-fundo h3 {
+  color: #000;
+}
+#problema h2 {
+  color: #000;
+}
+.problem-impact-grid h3{
+  color: #000;
+}
+.connection-lead {
+  color: #fff;
+}
+.connection-final{
+  color: #fff;
+}
+.giro360-section .result-title {
+  color: #000;
+}
+.title-dark {
+  color: #000;
+}
+
+.title-light {
+  color: #000;
+}
+.giro360-card h3 {
+  color: #000;
+}
+.giro360-fecho strong {
+  color: #000;
+}
+.trust-header h1 {
+  color: #000;
+}
