@@ -1,1275 +1,485 @@
-* { margin: 0; padding: 0; box-sizing: border-box; }
-
-:root {
-  --header-height: 150px;
-}
-
-html { scroll-behavior: smooth; }
-
-body {
-  font-family: 'Montserrat', sans-serif;
-  color: #fff;
-  background: #000;
-}
-
-.container {
-  width: 90%;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 40px 0;
-}
-
-/* ===== Header / Menu ===== */
-.top-menu {
-  background: #000;
-  padding: 10px 20px;
-  border-bottom: 1px solid transparent;
-}
-
-.menu-flex {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.menu-right {
-  list-style: none;
-  display: flex;
-  gap: 25px;
-  align-items: center;
-}
-
-.menu-right li a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 0.95rem;
-  transition: color 0.3s ease;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.menu-right li a:hover { color: #00aaff; }
-
-.menu-icon {
-  width: 20px;
-  height: 20px;
-  object-fit: contain;
-  margin-right: 6px;
-  vertical-align: middle;
-  filter: brightness(1.3) contrast(1.5);
-}
-
-/* ===== TOPO FIXO ===== */
-.header-fixed {
-  position: sticky;
-  top: 0;
-  z-index: 3000;
-  background-color: #000;
-  box-shadow: 0 2px 0 rgba(0,0,0,0.2);
-}
-
-/* ===== Hero/Header branding ===== */
-.slim-header {
-  background-color: #000;
-  text-align: center;
-  padding: 8px 10px 10px;
-}
-
-.logo {
-  width: 250px;
-  margin-bottom: 4px;
-  margin-top: -2px;
-}
-
-.logo-link { display: inline-block; }
-
-header h1, .slim-header h1 {
-  font-size: 1.1rem;
-  color: #00aaff;
-  margin: 0;
-  padding: 0;
-}
-
-/* ===== Grid base ===== */
-.row,
-.hero-row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  gap: 30px;
-}
-
-.half {
-  flex: 1;
-  min-width: 300px;
-  display: flex;
-  flex-direction: column;
-}
-
-.card-box {
-  background: #000;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 0 20px #00000033;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-/* ===== Seções em tela cheia ===== */
-.section-screen {
-  min-height: calc(100vh - var(--header-height));
-  min-height: calc(100svh - var(--header-height));
-  display: block;
-  overflow: visible;
-  padding-top: 32px;
-  padding-bottom: 32px;
-}
-
-#inicio,
-#problema,
-#sobre,
-#aplicacao,
-#metodologia,
-#prova,
-#instituicoes,
-#resultados,
-#cta {
-  scroll-margin-top: var(--header-height);
-}
-
-/* ===== HERO ===== */
-.hero-flex {
-  position: relative;
-  background: url('fundo-hero.png') center center / cover no-repeat;
-  padding: 32px 0 32px;
-}
-
-#inicio.section-screen {
-  padding-top: 40px;
-  padding-bottom: 40px;
-}
-
-.hero-container {
-  width: 100%;
-}
-
-.hero-copy {
-  text-align: center;
-  max-width: 900px;
-  margin: 28px auto 0;
-}
-
-.hero-subtitle {
-  color: #d7eefc;
-  font-size: 1.05rem;
-  line-height: 1.7;
-}
-
-/* ===== Ícones do topo ===== */
-.icon-cards-fixed {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
-  justify-items: center;
-  margin-top: 20px;
-}
-
-.icon-card {
-  background: #000;
-  padding: 20px 10px;
-  border-radius: 8px;
-  width: 100%;
-  max-width: 200px;
-  height: 150px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border-left: 4px solid #00aaff;
-  text-align: center;
-  transition: transform 0.2s;
-}
-
-.icon-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 10px #00aaff55;
-}
-
-.icon-card .icon {
-  font-size: 1.8rem;
-  margin-bottom: 8px;
-  color: #00aaff;
-}
-
-.icon-card p {
-  font-size: 0.85rem;
-  color: #ddd;
-}
-
-/* ===== Formulário ===== */
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  width: 100%;
-}
-
-input, textarea, button { width: 100%; }
-
-input, textarea {
-  padding: 12px 12px;
-  border-radius: 6px;
-  border: none;
-  background: #ffffff;
-  color: #000000;
-}
-
-input::placeholder, textarea::placeholder { color: #555555; }
-
-button {
-  padding: 12px;
-  background: #00aaff;
-  border: none;
-  border-radius: 6px;
-  color: #000;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-button:hover { background: #008ecc; }
-
-/* ===== Ponteiro ===== */
-.section-pointer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 6px;
-  margin: 20px auto 0;
-  text-decoration: none;
-}
-
-.section-pointer .arrow {
-  font-size: 1.6rem;
-  line-height: 1;
-  color: #00aaff;
-  animation: bounce 1.5s infinite;
-}
-
-.section-pointer .label {
-  font-size: 1rem;
-  font-weight: 700;
-  color: #ffffff;
-}
-
-.section-pointer:hover .label { color: #00aaff; }
-
-@keyframes bounce {
-  0%,20%,50%,80%,100% { transform: translateY(0); }
-  40% { transform: translateY(-4px); }
-  60% { transform: translateY(-2px); }
-}
-
-/* ===== Desafio ===== */
-.services ul {
-  list-style: none;
-  padding-left: 0;
-  text-align: center;
-}
-
-.services li {
-  font-size: 1rem;
-  margin: 8px 0;
-  padding: 10px;
-  background: #000;
-  border-left: 4px solid #00aaff;
-  max-width: 600px;
-  color: #ccc;
-  display: inline-block;
-  width: 100%;
-}
-
-.blue-bg {
-  background:
-    linear-gradient(135deg, rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0.08)),
-    url('fundo-hero.png') center center / cover no-repeat;
-  padding: 60px 0;
-}
-
-/* ===== O Programa ===== */
-.sobre-com-fundo {
-  background: url('fundo-hero.png') center center / cover no-repeat;
-  padding: 56px 20px 72px;
-  color: #fff;
-}
-
-.sobre-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 32px;
-  align-items: flex-start;
-}
-
-.sobre-texto { flex: 1 1 55%; }
-
-.sobre-texto h3 {
-  color: #ffffff;
-  margin-bottom: 12px;
-  font-size: 1.4rem;
-}
-
-.sobre-texto p {
-  font-size: 1.04rem;
-  line-height: 1.7;
-  text-align: justify;
-  color: #ffffff;
-}
-
-.sobre-mvv {
-  flex: 1 1 40%;
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-}
-
-.sobre-mvv h4 {
-  font-size: 1.1rem;
-  color: #000;
-  margin-bottom: 8px;
-}
-
-.sobre-mvv p {
-  font-size: 0.95rem;
-  color: #ffffff;
-  line-height: 1.6;
-  text-align: justify;
-}
-
-.mvv-item {
-  display: flex;
-  gap: 18px;
-  align-items: flex-start;
-}
-
-.mvv-item img { width: 52px; }
-
-/* ===== Aplicações ===== */
-.connection-section-visual {
-  background: url('fundo-hero.png') center center / cover no-repeat;
-  padding: 100px 20px 80px;
-  text-align: center;
-  color: #111;
-}
-
-.connection-header {
-  max-width: 900px;
-  margin: 0 auto 40px;
-}
-
-.connection-title {
-  font-size: 2.1rem;
-  font-weight: 700;
-  margin-bottom: 10px;
-  color: #0a0a0a;
-}
-
-.connection-lead {
-  font-size: 1.12rem;
-  color: #2f2f2f;
-}
-
-.connection-grid {
-  display: flex;
-  align-items: stretch;
-  justify-content: center;
-  gap: 22px;
-  flex-wrap: nowrap;
-  width: 95%;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.connection-item {
-  flex: 1 1 0;
-  min-width: 260px;
-  max-width: 320px;
-  background: rgba(255, 255, 255, 0.88);
-  backdrop-filter: blur(2px);
-  padding: 22px;
-  border-radius: 16px;
-  box-shadow: 0 8px 30px rgba(0, 29, 61, 0.08);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
-  border: 1px solid rgba(0,0,0,0.04);
-}
-
-.connection-item:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 14px 40px rgba(0, 84, 150, 0.18);
-  border-color: rgba(0,170,255,0.25);
-}
-
-.connection-item img {
-  width: 66px;
-  margin-bottom: 14px;
-  transition: transform .25s ease;
-}
-
-.connection-item:hover img { transform: scale(1.06); }
-
-.connection-item h3 {
-  font-size: 1.18rem;
-  margin-bottom: 8px;
-  color: #0a0a0a;
-}
-
-.connection-item p {
-  font-size: 0.96rem;
-  color: #1f2a33;
-  line-height: 1.55;
-}
-
-.connection-arrow {
-  align-self: center;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 48px;
-  height: 48px;
-  border-radius: 999px;
-  background: radial-gradient(circle at 30% 30%, #00aaff, #0079b7);
-  color: #fff;
-  font-size: 1.2rem;
-  font-weight: 700;
-  box-shadow: 0 10px 24px rgba(0, 122, 191, 0.35), inset 0 0 8px rgba(255,255,255,0.25);
-  user-select: none;
-}
-
-.connection-final {
-  margin-top: 44px;
-  font-size: 1.08rem;
-  color: #1f2a33;
-}
-
-/* ===== Metodologia ===== */
-.giro360-section {
-  background:
-    url('fundo-hero.png') center center / cover no-repeat;
-  color: #ffffff;
-  padding: 80px 20px;
-  text-align: center;
-}
-
-.giro360-header h2 {
-  font-size: 2rem;
-  color: #00aaff;
-  margin-bottom: 10px;
-}
-
-.giro360-intro {
-  max-width: 800px;
-  margin: 0 auto 40px;
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: #e0f6ff;
-}
-
-.giro360-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-  margin-top: 30px;
-}
-
-.giro360-card {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(6px);
-  border-radius: 12px;
-  padding: 24px 20px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.25);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.giro360-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 0 20px rgba(0,170,255,0.4);
-}
-
-.giro360-card img {
-  width: 64px;
-  margin-bottom: 14px;
-}
-
-.giro360-card h3 {
-  font-size: 1.15rem;
-  color: #00aaff;
-  margin-bottom: 10px;
-}
-
-.giro360-card p {
-  font-size: 0.95rem;
-  color: #d8e8f3;
-  line-height: 1.6;
-}
-
-.giro360-fecho {
-  margin-top: 50px;
-  font-size: 1.1rem;
-  color: #f0f8ff;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-  line-height: 1.6;
-}
-
-.giro360-fecho strong { color: #00aaff; }
-
-/* ===== Validação ===== */
-.trust-section {
-  background: url('fundo-hero.png') center center / cover no-repeat;
-  padding: 80px 20px;
-  color: #e9f6ff;
-}
-
-.trust-header {
-  text-align: center;
-  margin-bottom: 34px;
-}
-
-.trust-header h1 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-  color: #ffffff;
-}
-
-.trust-header p {
-  font-size: 1.05rem;
-  color: #d5e8f6;
-}
-
-.metrics-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
-  margin-bottom: 34px;
-}
-
-.metric-card {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(6px);
-  border: 1px solid rgba(255,255,255,0.06);
-  border-radius: 12px;
-  padding: 18px;
-  text-align: center;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
-}
-
-.metric-card strong {
-  display: block;
-  font-size: 1.5rem;
-  color: #ffffff;
-}
-
-.metric-card span {
-  font-size: 0.95rem;
-  color: #b6d5e8;
-}
-
-.testimonial-grid {
-  margin-top: 34px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-}
-
-.testimonial-card {
-  background: rgba(255,255,255,0.06);
-  backdrop-filter: blur(6px);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 12px;
-  padding: 18px;
-  color: #e9f6ff;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
-}
-
-.testimonial-card p {
-  font-size: 0.98rem;
-  line-height: 1.55;
-  position: relative;
-}
-
-.testimonial-card p::before {
-  content:"“";
-  position:absolute;
-  left:-10px;
-  top:-8px;
-  font-size:2rem;
-  opacity:.25;
-}
-
-.testimonial-card .who {
-  display: block;
-  margin-top: 10px;
-  font-size: 0.9rem;
-  color: #9ec5dc;
-}
-
-/* ===== Resultados ===== */
-.diferencial-section {
-  background:
-    url('fundo-hero.png') center center / cover no-repeat;
-  color: #fff;
-  padding: 80px 20px;
-  text-align: center;
-}
-
-.diferencial-section h1 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: #00aaff;
-}
-
-.diferencial-intro {
-  max-width: 800px;
-  margin: 0 auto 50px;
-  font-size: 1.1rem;
-  color: #ddd;
-  line-height: 1.6;
-}
-
-.diferencial-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-}
-
-.diferencial-card {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(6px);
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.diferencial-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 0 20px rgba(0,170,255,0.4);
-}
-
-.diferencial-card img {
-  width: 60px;
-  margin-bottom: 15px;
-}
-
-.diferencial-card h3 {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-  color: #00aaff;
-}
-
-.diferencial-card p {
-  font-size: 0.95rem;
-  color: #ccc;
-  line-height: 1.5;
-}
-
-.diferencial-fecho {
-  margin-top: 30px;
-  font-size: 1.1rem;
-  font-weight: 500;
-  color: #fff;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-  line-height: 1.5;
-}
-
-.diferencial-fecho strong { color: #00aaff; }
-
-/* ===== CTA ===== */
-.cta-container {
-  text-align: center;
-}
-
-.cta-container h2 {
-  margin-bottom: 20px;
-}
-
-.cta-container p {
-  max-width: 820px;
-  margin: 0 auto 24px;
-  font-size: 1.05rem;
-  line-height: 1.7;
-  color: #eef9ff;
-}
-
-.cta-button {
-  display: inline-block;
-  background: #000;
-  color: #fff;
-  padding: 14px 24px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 700;
-}
-
-/* ===== Footer ===== */
-footer {
-  background: #000;
-  text-align: center;
-  padding: 30px 20px;
-  font-size: 0.9rem;
-  color: #777;
-}
-
-section h2 { text-align: center; }
-
-/* ===== WhatsApp ===== */
-.whatsapp-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 5000;
-  background-color: #25D366;
-  color: #fff;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 10px 14px;
-  border-radius: 30px;
-  text-decoration: none;
-  box-shadow: 0 0 10px #00000050;
-  transition: transform 0.3s, background-color 0.3s;
-}
-
-.whatsapp-float:hover {
-  transform: scale(1.05);
-  background-color: #1eb153;
-}
-
-.whatsapp-float span {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.95rem;
-}
-
-.whatsapp-float img {
-  width: 24px;
-  height: 24px;
-}
-
-/* ===== Fade in ===== */
-.fade-in {
-  opacity: 0;
-  transform: translateY(18px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
-}
-
-.fade-in.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* ===== Responsividade ===== */
-@media (max-width: 1024px) {
-  .metrics-grid { grid-template-columns: repeat(2, 1fr); }
-}
-
-@media (max-width: 900px) {
-  .icon-cards-fixed { grid-template-columns: repeat(2, 1fr); }
-  .testimonial-grid { grid-template-columns: 1fr 1fr; }
-  .connection-grid { flex-wrap: wrap; }
-}
-
-@media (max-width: 768px) {
-  :root {
-    --header-height: 120px;
-  }
-
-  .slim-header {
-    padding: 6px 10px;
-  }
-
-  .logo {
-    width: 170px;
-    margin-top: -2px;
-    margin-bottom: 2px;
-  }
-
-  .slim-header h1 {
-    font-size: 1rem;
-    line-height: 1.2;
-  }
-
-  .menu-right {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 14px;
-  }
-
-  .menu-right li a {
-    font-size: 0.85rem;
-  }
-
-  .row,
-  .hero-row {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .half { width: 100%; }
-
-  .sobre-grid {
-    flex-direction: column;
-    gap: 24px;
-  }
-
-  .sobre-com-fundo {
-    padding: 44px 18px 56px;
-  }
-
-  .sobre-texto p {
-    font-size: 0.98rem;
-    line-height: 1.65;
-  }
-
-  .connection-section-visual {
-    padding: 70px 16px 60px;
-  }
-
-  .connection-grid {
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-  }
-
-  .connection-arrow {
-    transform: rotate(90deg);
-  }
-
-  .connection-item {
-    width: 100%;
-    max-width: 560px;
-  }
-
-  .metrics-grid,
-  .testimonial-grid,
-  .diferencial-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .section-screen {
-    min-height: calc(100vh - var(--header-height));
-    min-height: calc(100svh - var(--header-height));
-    padding-top: 24px;
-    padding-bottom: 24px;
-  }
-
-  #inicio.section-screen {
-    padding-top: 28px;
-    padding-bottom: 28px;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .fade-in {
-    transition: none !important;
-    transform: none !important;
-    opacity: 1 !important;
-  }
-}
-#problema {
-  padding-top: clamp(100px, 15vh, 180px);
-  padding-bottom: clamp(60px, 10vh, 120px);
-}
-#sobre {
-  padding-top: clamp(100px, 15vh, 180px);
-  padding-bottom: clamp(60px, 10vh, 120px);
-}
-#inicio{
-  padding-top: clamp(100px, 15vh, 180px);
-  padding-bottom: clamp(60px, 10vh, 120px);
-}
-#prova{
-  padding-top: clamp(100px, 15vh, 180px);
-  padding-bottom: clamp(60px, 10vh, 120px);
-}
-
-#instituicoes {
-padding-top: clamp(100px, 15vh, 180px);
-  padding-bottom: clamp(60px, 10vh, 120px);
-}
-#instituicoes .metric-card,
-#instituicoes .testimonial-card {
-  backdrop-filter: blur(8px);
-}
-/* ===== Instituições / Logos ===== */
-.institutions-showcase {
-  margin-top: 22px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 18px;
-}
-
-.institutions-seal {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.institutions-seal img {
-  width: 125px;
-  max-width: 100%;
-  height: auto;
-  filter: drop-shadow(0 10px 24px rgba(0, 0, 0, 0.25));
-}
-
-.institutions-grid {
-  width: 100%;
-  max-width: 1100px;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 22px;
-  align-items: stretch;
-}
-
-.institution-card {
-  background: rgba(255, 255, 255, 0.10);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.10);
-  border-radius: 16px;
-  min-height: 110px;
-  padding: 18px 18px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.16);
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-}
-
-.institution-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.22);
-  border-color: rgba(255, 255, 255, 0.18);
-}
-
-.institution-card img {
-  max-width: 100%;
-  max-height: 58px;
-  width: auto;
-  height: auto;
-  object-fit: contain;
-  display: block;
-}
-
-.institution-card-wide img {
-  max-height: 72px;
-}
-
-.institutions-footnote {
-  max-width: 860px;
-  text-align: center;
-}
-
-.institutions-footnote p {
-  font-size: 1rem;
-  line-height: 1.65;
-  color: #d8e8f3;
-}
-@media (max-width: 1024px) {
-  .institutions-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  .institutions-showcase {
-    gap: 22px;
-  }
-
-  .institutions-seal img {
-    width: 130px;
-  }
-
-  .institutions-grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-
-  .institution-card {
-    min-height: 110px;
-    padding: 18px 16px;
-    border-radius: 14px;
-  }
-
-  .institution-card img {
-  max-height: 64px;
-  width: auto;
-}
-
-  .institution-card-wide img {
-    max-height: 58px;
-  }
-
-  .institutions-footnote p {
-    font-size: 0.95rem;
-    line-height: 1.6;
-  }
-}
-.ciclo-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  margin-top: 40px;
-}
-
-.ciclo-col {
-  background: rgba(255,255,255,0.08);
-  backdrop-filter: blur(8px);
-  border-radius: 16px;
-  padding: 30px;
-  text-align: left;
-}
-
-.ciclo-col h3 {
-  color: #00bfff;
-  margin-bottom: 15px;
-}
-
-.ciclo-col ul {
-  list-style: none;
-  padding: 0;
-}
-
-.ciclo-col li {
-  margin-bottom: 10px;
-  color: #eaeaea;
-}
-/* ===== Desafio expandido ===== */
-.services-expanded {
-  text-align: center;
-}
-
-.problem-list {
-  list-style: none;
-  padding-left: 0;
-  margin: 28px auto 0;
-  max-width: 980px;
-}
-
-.problem-list li {
-  font-size: 1rem;
-  margin: 8px auto;
-  padding: 12px 16px;
-  background: #000;
-  border-left: 4px solid #00aaff;
-  max-width: 860px;
-  color: #f1f1f1;
-  display: block;
-  width: 100%;
-  line-height: 1.45;
-}
-
-.problem-transition {
-  max-width: 920px;
-  margin: 34px auto 28px;
-  text-align: center;
-}
-
-.problem-transition p {
-  font-size: 1.08rem;
-  line-height: 1.7;
-  color: #eef7ff;
-}
-
-.problem-transition strong {
-  color: #ffffff;
-}
-
-.problem-impact-grid {
-  margin-top: 10px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 26px;
-  align-items: stretch;
-}
-
-.problem-impact-card {
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(255,255,255,0.10);
-  border-radius: 18px;
-  padding: 28px 26px;
-  text-align: left;
-  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.18);
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-}
-
-.problem-impact-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.22);
-  border-color: rgba(255,255,255,0.18);
-}
-
-.problem-impact-card h3 {
-  font-size: 1.35rem;
-  margin-bottom: 18px;
-  color: #ffffff;
-}
-
-.problem-impact-card ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.problem-impact-card li {
-  position: relative;
-  padding-left: 18px;
-  margin-bottom: 14px;
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #eef7ff;
-}
-
-.problem-impact-card li::before {
-  content: "•";
-  position: absolute;
-  left: 0;
-  top: 0;
-  color: #00aaff;
-  font-weight: bold;
-}
-
-/* responsivo */
-@media (max-width: 900px) {
-  .problem-impact-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 768px) {
-  .problem-list {
-    margin-top: 22px;
-  }
-
-  .problem-list li {
-    font-size: 0.95rem;
-    padding: 12px 14px;
-    line-height: 1.4;
-  }
-
-  .problem-transition {
-    margin: 26px auto 22px;
-  }
-
-  .problem-transition p {
-    font-size: 0.98rem;
-    line-height: 1.65;
-  }
-
-  .problem-impact-card {
-    padding: 22px 20px;
-    border-radius: 14px;
-  }
-
-  .problem-impact-card h3 {
-    font-size: 1.2rem;
-  }
-
-  .problem-impact-card li {
-    font-size: 0.95rem;
-    line-height: 1.55;
-  }
-}
-/* Título da seção Resultados */
-#resultados h2 {
-  color: #000000;
-}
-
-/* Subtítulo da seção */
-#resultados p {
-  color: #111111;
-}
-
-/* Títulos dos cards */
-#resultados .metric-card h3 {
-  color: #000000;
-}
-.result-title {
-  color: #000000;
-}
-
-.result-subtitle {
-  color: #1a1a1a;
-}
-
-.metric-card h3 {
-  color: #000000;
-}
-.sobre-com-fundo h3 {
-  color: #000;
-}
-#problema h2 {
-  color: #000;
-}
-.problem-impact-grid h3{
-  color: #000;
-}
-.connection-lead {
-  color: #fff;
-}
-.connection-final{
-  color: #fff;
-}
-.giro360-section .result-title {
-  color: #000;
-}
-.title-dark {
-  color: #000;
-}
-
-.title-light {
-  color: #000;
-}
-.giro360-card h3 {
-  color: #000;
-}
-.giro360-fecho strong {
-  color: #000;
-}
-.trust-header h1 {
-  color: #000;
-}
-/* ===== RESULTADOS - PADRÃO FINAL ===== */
-
-/* Subtítulo branco */
-#resultados .giro360-intro {
-  color: #fff;
-}
-
-/* Título dos cards (somente eles) */
-#resultados .diferencial-card h3 {
-  color: #000;
-}
-
-/* Conteúdo dos cards branco */
-#resultados .diferencial-card p {
-  color: #fff;
-}
-
-/* Texto final (fecho) branco */
-#resultados .diferencial-fecho {
-  color: #fff;
-}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <link rel="icon" type="image/png" href="favicon_pulsar.png">
+  <meta charset="UTF-8" />
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id=' + i + dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-T92L6D2K');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Programa Pulsar</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <script defer>
+    document.addEventListener('DOMContentLoaded', function () {
+      const fadeElements = document.querySelectorAll('.fade-in');
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      fadeElements.forEach(el => observer.observe(el));
+    });
+  </script>
+</head>
+<body>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T92L6D2K" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <div class="header-fixed">
+    <header class="top-menu">
+      <div class="menu-flex">
+        <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menuNav">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="menu-nav" id="menuNav">
+          <ul class="menu-right">
+            <li><a href="#inicio"><img src="home.png" alt="Início" class="menu-icon">Home</a></li>
+            <li><a href="#problema"><img src="icon-desafio.png" alt="Desafio" class="menu-icon">Desafio</a></li>
+            <li><a href="#sobre"><img src="icon_programa.png" alt="O Programa" class="menu-icon">O Programa</a></li>
+            <li><a href="#aplicacao"><img src="icon-aplicacoes.png" alt="Aplicações" class="menu-icon">Aplicações</a></li>
+            <li><a href="#metodologia"><img src="icon-metodologia.png" alt="Metodologia" class="menu-icon">Metodologia</a></li>
+            <li><a href="#instituicoes"><img src="icon-instituicao.png" alt="Instituições" class="menu-icon">Instituições</a></li>
+            <li><a href="#prova"><img src="icon-validacao.png" alt="Validação" class="menu-icon">Validação</a></li>
+            <li><a href="#resultados"><img src="icon-resultados.png" alt="Resultados" class="menu-icon">Resultados</a></li>
+            <li><a href="#cta"><img src="icon-contato.png" alt="Contato" class="menu-icon">Contato</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="slim-header">
+      <a href="#inicio" class="logo-link" aria-label="Voltar ao início">
+        <img src="logo_cheia_pulsar.png" alt="Logo Programa Pulsar" class="logo">
+      </a>
+      <h1>Infraestrutura estratégica de governança preventiva para instituições</h1>
+    </div>
+  </div>
+
+  <div class="menu-overlay"></div>
+
+  <!-- HERO -->
+  <section id="inicio" class="hero-flex section-screen fade-in">
+    <div class="container hero-container">
+      <div class="row hero-row">
+        <div class="half">
+          <div class="icon-cards-fixed">
+            <div class="icon-card"><div class="icon">🏫</div><p>Aplicável a escolas particulares</p></div>
+            <div class="icon-card"><div class="icon">🏛️</div><p>Aplicável a órgãos públicos</p></div>
+            <div class="icon-card"><div class="icon">🏢</div><p>Aplicável a empresas</p></div>
+            <div class="icon-card"><div class="icon">🧠</div><p>Inteligência comportamental</p></div>
+            <div class="icon-card"><div class="icon">📊</div><p>Indicadores institucionais</p></div>
+            <div class="icon-card"><div class="icon">🛡️</div><p>Governança preventiva</p></div>
+          </div>
+        </div>
+
+        <div class="half">
+          <div class="card-box" id="contato">
+            <form>
+              <input type="text" placeholder="Nome completo" required>
+              <input type="text" placeholder="Instituição / Empresa" required>
+              <input type="email" placeholder="E-mail corporativo" required>
+              <input type="tel" placeholder="Telefone / WhatsApp" required>
+              <textarea placeholder="Conte brevemente o desafio institucional que deseja enfrentar" rows="4" required></textarea>
+              <button type="submit">Quero conhecer o Programa Pulsar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-copy">
+        <p class="hero-subtitle">
+          O Programa Pulsar estrutura inteligência preventiva para escolas, organizações públicas e empresas
+          que desejam antecipar riscos, proteger seu ambiente institucional e tomar decisões com base em evidências.
+        </p>
+      </div>
+
+      <a href="#problema" class="section-pointer" aria-label="Ir para a próxima seção">
+        <span class="arrow">▼</span>
+        <span class="label">Entenda o desafio</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- DESAFIO -->
+  <section id="problema" class="blue-bg section-screen fade-in">
+    <div class="container services services-expanded">
+      <h2>A vulnerabilidade invisível nas instituições</h2>
+
+      <ul class="problem-list">
+        <li>Sinais comportamentais e organizacionais que não são registrados com clareza</li>
+        <li>Decisões baseadas apenas em percepção individual, e não em evidências estruturadas</li>
+        <li>Desgaste institucional progressivo, silencioso e difícil de mensurar</li>
+        <li>Falta de leitura integrada de indicadores humanos e institucionais</li>
+        <li>Riscos que só são percebidos quando já causaram impacto no ambiente e na reputação</li>
+        <li>Ausência de protocolos preventivos formais para antecipação e resposta</li>
+      </ul>
+
+      <div class="problem-transition">
+        <p>
+          <strong>Quando a leitura falha, o impacto aparece.</strong>
+          É nesse ponto que o Pulsar estrutura a resposta.
+        </p>
+      </div>
+
+      <div class="problem-impact-grid">
+        <div class="problem-impact-card">
+          <h3>Impactos para a organização</h3>
+          <ul>
+            <li>Decisões reativas e tardias diante de situações sensíveis</li>
+            <li>Redução da previsibilidade institucional e da capacidade de antecipação</li>
+            <li>Desgaste organizacional silencioso, progressivo e de difícil contenção</li>
+            <li>Riscos reputacionais percebidos apenas após impacto instalado</li>
+          </ul>
+        </div>
+
+        <div class="problem-impact-card">
+          <h3>Como o Pulsar responde</h3>
+          <ul>
+            <li>Estrutura indicadores institucionais e evidências organizadas</li>
+            <li>Integra sinais humanos e organizacionais em leitura contínua</li>
+            <li>Amplia a capacidade de antecipação e resposta preventiva</li>
+            <li>Orienta decisões com base em inteligência estruturada, e não em percepção isolada</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- O QUE É O PROGRAMA -->
+  <section id="sobre" class="sobre-com-fundo section-screen fade-in">
+    <div class="container sobre-grid">
+      <div class="sobre-texto">
+        <h3>O que é o Programa Pulsar?</h3>
+        <p>
+          O <strong>Programa Pulsar</strong> é uma infraestrutura estratégica de inteligência institucional
+          voltada à organização de evidências, leitura preventiva de sinais e estruturação de indicadores
+          aplicados à governança de instituições.
+          <br><br>
+          Mais do que uma solução operacional, o Pulsar foi concebido para apoiar escolas particulares,
+          órgãos públicos e empresas na construção de um ambiente mais previsível, protegido e sustentável.
+          <br><br>
+          Seu diferencial está na capacidade de integrar leitura comportamental, organização institucional,
+          monitoramento contínuo e geração de relatórios estratégicos, permitindo decisões mais seguras,
+          fundamentadas e antecipatórias.
+        </p>
+      </div>
+
+      <div class="sobre-mvv">
+        <div class="mvv-item fade-in">
+          <img src="icon_indicadores.png" alt="Governança Preventiva" />
+          <div>
+            <h4><strong>Governança Preventiva</strong></h4>
+            <p>Estruturação formal de indicadores institucionais, evidências organizadas e protocolos para antecipação de riscos.</p>
+          </div>
+        </div>
+
+        <div class="mvv-item fade-in">
+          <img src="icon-leitura.png" alt="Inteligência Comportamental" />
+          <div>
+            <h4><strong>Inteligência Comportamental</strong></h4>
+            <p>Leitura integrada de sinais humanos e organizacionais, permitindo identificar padrões antes que se tornem crises.</p>
+          </div>
+        </div>
+
+        <div class="mvv-item fade-in">
+          <img src="icon-confianca.png" alt="Blindagem Institucional" />
+          <div>
+            <h4><strong>Blindagem Institucional</strong></h4>
+            <p>Mais segurança organizacional, proteção reputacional e base estruturada para decisões com maior previsibilidade.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ONDE O PULSAR SE APLICA -->
+  <section id="aplicacao" class="connection-section-visual section-screen fade-in">
+    <div class="container">
+      <div class="connection-header">
+        <h2 class="connection-title">Onde o Pulsar se aplica</h2>
+        <p class="connection-lead">
+          Uma mesma lógica de inteligência preventiva adaptada a diferentes tipos de instituição.
+        </p>
+      </div>
+
+      <div class="connection-grid">
+        <div class="connection-item">
+          <img src="icon_behavior.png" alt="Escolas">
+          <h3>Escolas Particulares</h3>
+          <p>Fortalece o ambiente escolar, apoia a identificação precoce de vulnerabilidades e contribui para retenção e sustentabilidade institucional.</p>
+        </div>
+
+        <div class="connection-item">
+          <img src="icon_data.png" alt="Órgãos Públicos">
+          <h3>Órgãos Públicos</h3>
+          <p>Organiza indicadores institucionais, amplia a capacidade de leitura interna e fortalece a governança de ambientes complexos.</p>
+        </div>
+
+        <div class="connection-item">
+          <img src="icon_tech.png" alt="Empresas">
+          <h3>Empresas</h3>
+          <p>Ajuda a compreender o ambiente organizacional, antecipar desgastes e transformar sinais difusos em inteligência aplicada à gestão.</p>
+        </div>
+      </div>
+
+      <p class="connection-final">
+        O Pulsar se adapta à realidade da instituição, respeitando seu contexto, sua estrutura e seus objetivos estratégicos.
+      </p>
+    </div>
+  </section>
+
+  <!-- METODOLOGIA -->
+  <section id="metodologia" class="giro360-section section-screen fade-in">
+    <div class="container">
+      <div class="giro360-header">
+        <h2 class="result-title title-light">Metodologia de Implantação</h2>
+        <p class="giro360-intro">
+          Uma jornada estruturada para transformar sinais difusos em inteligência institucional aplicada à tomada de decisão.
+        </p>
+      </div>
+
+      <div class="giro360-grid">
+        <div class="giro360-card">
+          <img src="giro_auditoria.png" alt="Diagnóstico Institucional">
+          <h3>1. Diagnóstico Institucional</h3>
+          <p>Leitura inicial da realidade da instituição, identificação de áreas sensíveis e compreensão do contexto organizacional.</p>
+        </div>
+
+        <div class="giro360-card">
+          <img src="giro_compensacao.png" alt="Estruturação de Indicadores">
+          <h3>2. Estruturação de Indicadores</h3>
+          <p>Organização dos primeiros sinais estratégicos, evidências e protocolos preventivos de acompanhamento.</p>
+        </div>
+
+        <div class="giro360-card">
+          <img src="giro_monetizacao.png" alt="Monitoramento Contínuo">
+          <h3>3. Monitoramento Contínuo</h3>
+          <p>Acompanhamento estruturado dos sinais institucionais, com leitura progressiva da dinâmica interna da organização.</p>
+        </div>
+
+        <div class="giro360-card">
+          <img src="giro_compliance.png" alt="Relatórios Estratégicos">
+          <h3>4. Relatórios Estratégicos</h3>
+          <p>Consolidação das informações e geração de base segura para decisões orientadas por evidências.</p>
+        </div>
+      </div>
+
+      <div class="giro360-fecho">
+        <p><strong>O Pulsar transforma percepção em estrutura:</strong> <br>observa → organiza → acompanha → orienta.<br>
+        Uma nova camada de governança para instituições que desejam antecipar riscos e sustentar decisões com inteligência.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="instituicoes" class="trust-section section-screen fade-in">
+    <div class="container">
+      <div class="trust-header">
+        <h1>Instituições que já integram a iniciativa Pulsar</h1>
+        <p>Presença institucional em diferentes contextos organizacionais e de impacto social.</p>
+      </div>
+
+      <div class="institutions-showcase">
+        <div class="institutions-seal">
+          <img src="selo-pulsar.png" alt="Participante autorizada do Programa Pulsar">
+        </div>
+
+        <div class="institutions-grid">
+          <div class="institution-card">
+            <img src="logo-instituto-cnp-brasil.png" alt="Instituto CNP Brasil">
+          </div>
+
+          <div class="institution-card">
+            <img src="logo-cebraspe.png" alt="CNP">
+          </div>
+
+          <div class="institution-card">
+            <img src="logo-motorola.png" alt="Motorola">
+          </div>
+
+          <div class="institution-card">
+            <img src="logo-bauducco.png" alt="Bauducco">
+          </div>
+
+          <div class="institution-card">
+            <img src="logo-pg.png" alt="P&G">
+          </div>
+
+          <div class="institution-card institution-card-wide">
+            <img src="logo-ministerio-governo.png" alt="Ministério dos Direitos Humanos e da Cidadania e Governo Federal Brasil">
+          </div>
+
+          <div class="institution-card">
+            <img src="logo-kimberly-clark.png" alt="Kimberly-Clark">
+          </div>
+
+          <div class="institution-card">
+            <img src="logo-perdigao.png" alt="Perdigão">
+          </div>
+        </div>
+
+        <div class="institutions-footnote">
+          <p>Uma iniciativa em construção institucional, com presença em contextos corporativos, sociais e públicos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALIDAÇÃO / PROVA -->
+  <section id="prova" class="trust-section section-screen fade-in">
+    <div class="container">
+      <div class="trust-header">
+        <h1>Instituições que já iniciaram o Pulsar</h1>
+        <p>O Programa Pulsar já iniciou sua validação institucional em contextos educacionais e organizacionais.</p>
+      </div>
+
+      <div class="metrics-grid">
+        <div class="metric-card"><strong>1º ciclo</strong><span>de validação institucional</span></div>
+        <div class="metric-card"><strong>Metodologia</strong><span>já aplicada em campo</span></div>
+        <div class="metric-card"><strong>Estrutura</strong><span>adaptável por contexto</span></div>
+        <div class="metric-card"><strong>Expansão</strong><span>em andamento</span></div>
+      </div>
+
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <p>Estruturação de leitura institucional e organização de indicadores aplicados a contextos educacionais voltados ao desenvolvimento socioemocional e prevenção.</p>
+        </div>
+
+        <div class="testimonial-card">
+          <p>Diagnóstico institucional, identificação de vulnerabilidades invisíveis e base inicial para implantação da inteligência preventiva em ambiente educacional parceiro.</p>
+        </div>
+
+        <div class="testimonial-card">
+          <p>O Programa Pulsar já iniciou sua validação institucional. As próximas instituições integrarão o ciclo inicial de expansão e consolidação metodológica.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESULTADOS -->
+  <section id="resultados" class="diferencial-section section-screen fade-in">
+    <div class="container">
+      <div class="diferencial-header">
+        <h2 class="result-title">Resultados esperados com o Pulsar</h2>
+        <p class="giro360-intro">
+          Uma instituição que enxerga antes, decide melhor.
+        </p>
+      </div>
+
+      <div class="diferencial-grid">
+        <div class="diferencial-card">
+          <img src="icon_tech.png" alt="Ambiente mais saudável">
+          <h3>Ambiente mais saudável</h3>
+          <p>Identificação precoce de situações sensíveis, redução de desgastes silenciosos e maior equilíbrio institucional.</p>
+        </div>
+
+        <div class="diferencial-card">
+          <img src="icon_behavior.png" alt="Decisões baseadas em evidências">
+          <h3>Decisões baseadas em evidências</h3>
+          <p>Mais clareza sobre a realidade interna da instituição e maior previsibilidade para agir com segurança.</p>
+        </div>
+
+        <div class="diferencial-card">
+          <img src="icon_data.png" alt="Proteção institucional">
+          <h3>Proteção institucional</h3>
+          <p>Registros estruturados, fortalecimento da governança e maior proteção reputacional e organizacional.</p>
+        </div>
+      </div>
+
+      <div class="diferencial-fecho">
+        Governança não começa na crise, <strong>começa na capacidade de ler os sinais antes dela.</strong>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section id="cta" class="blue-bg section-screen fade-in">
+    <div class="container cta-container">
+      <h2>Sua instituição já possui uma infraestrutura de inteligência preventiva?</h2>
+      <p>
+        O Programa Pulsar foi concebido para instituições que desejam sair da reação e entrar em uma nova lógica de leitura institucional,
+        prevenção estruturada e decisão baseada em evidências.
+      </p>
+      <a href="https://wa.me/5561999897186?text=Olá!%20Gostaria%20de%20conhecer%20o%20Programa%20Pulsar."
+         target="_blank"
+         class="cta-button">
+        Falar com a equipe do Pulsar
+      </a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-legal">
+      <p>© 2026 Programa Pulsar. Todos os direitos reservados.</p>
+      <p>Uma iniciativa com foco em governança preventiva, inteligência institucional e fortalecimento de ambientes organizacionais.</p>
+    </div>
+  </footer>
+
+  <a
+    href="https://wa.me/5561999897186?text=Olá!%20Gostaria%20de%20conhecer%20o%20Programa%20Pulsar."
+    class="whatsapp-float"
+    target="_blank"
+    aria-label="Fale conosco no WhatsApp"
+    onclick="dataLayer && dataLayer.push({ event: 'whatsapp_click' });"
+  >
+    <span>Fale conosco</span>
+    <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp">
+  </a>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const menuToggle = document.querySelector('.menu-toggle');
+      const menuNav = document.querySelector('.menu-nav');
+      const menuOverlay = document.querySelector('.menu-overlay');
+      const menuLinks = document.querySelectorAll('.menu-right a');
+
+      if (!menuToggle || !menuNav || !menuOverlay) return;
+
+      function openMenu() {
+        menuNav.classList.add('active');
+        menuOverlay.classList.add('active');
+        menuToggle.classList.add('active');
+        menuToggle.setAttribute('aria-expanded', 'true');
+        document.body.classList.add('menu-open');
+      }
+
+      function closeMenu() {
+        menuNav.classList.remove('active');
+        menuOverlay.classList.remove('active');
+        menuToggle.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        document.body.classList.remove('menu-open');
+      }
+
+      menuToggle.addEventListener('click', function () {
+        if (menuNav.classList.contains('active')) {
+          closeMenu();
+        } else {
+          openMenu();
+        }
+      });
+
+      menuOverlay.addEventListener('click', closeMenu);
+
+      menuLinks.forEach(link => {
+        link.addEventListener('click', closeMenu);
+      });
+
+      window.addEventListener('resize', function () {
+        if (window.innerWidth > 768) {
+          closeMenu();
+        }
+      });
+    });
+  </script>
+</body>
+</html>

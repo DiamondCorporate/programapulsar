@@ -35,18 +35,23 @@
   <div class="header-fixed">
     <header class="top-menu">
       <div class="menu-flex">
-        <nav class="menu-nav">
+        <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menuNav">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="menu-nav" id="menuNav">
           <ul class="menu-right">
             <li><a href="#inicio"><img src="home.png" alt="Início" class="menu-icon">Home</a></li>
             <li><a href="#problema"><img src="icon-desafio.png" alt="Desafio" class="menu-icon">Desafio</a></li>
-			  
             <li><a href="#sobre"><img src="icon_programa.png" alt="O Programa" class="menu-icon">O Programa</a></li>
             <li><a href="#aplicacao"><img src="icon-aplicacoes.png" alt="Aplicações" class="menu-icon">Aplicações</a></li>
             <li><a href="#metodologia"><img src="icon-metodologia.png" alt="Metodologia" class="menu-icon">Metodologia</a></li>
-	    <li><a href="#instituicoes"><img src="icon-instituicao.png" alt="Instituições" class="menu-icon">Instituições</a></li>
+            <li><a href="#instituicoes"><img src="icon-instituicao.png" alt="Instituições" class="menu-icon">Instituições</a></li>
             <li><a href="#prova"><img src="icon-validacao.png" alt="Validação" class="menu-icon">Validação</a></li>
-			  <li><a href="#resultados"><img src="icon-resultados.png" alt="Resultados" class="menu-icon">Resultados</a></li>
-<li><a href="#cta"><img src="icon-contato.png" alt="Contato" class="menu-icon">Contato</a></li>
+            <li><a href="#resultados"><img src="icon-resultados.png" alt="Resultados" class="menu-icon">Resultados</a></li>
+            <li><a href="#cta"><img src="icon-contato.png" alt="Contato" class="menu-icon">Contato</a></li>
           </ul>
         </nav>
       </div>
@@ -59,6 +64,8 @@
       <h1>Infraestrutura estratégica de governança preventiva para instituições</h1>
     </div>
   </div>
+
+  <div class="menu-overlay"></div>
 
   <!-- HERO -->
   <section id="inicio" class="hero-flex section-screen fade-in">
@@ -104,50 +111,50 @@
   </section>
 
   <!-- DESAFIO -->
- <section id="problema" class="blue-bg section-screen fade-in">
-  <div class="container services services-expanded">
-    <h2>A vulnerabilidade invisível nas instituições</h2>
+  <section id="problema" class="blue-bg section-screen fade-in">
+    <div class="container services services-expanded">
+      <h2>A vulnerabilidade invisível nas instituições</h2>
 
-    <ul class="problem-list">
-      <li>Sinais comportamentais e organizacionais que não são registrados com clareza</li>
-      <li>Decisões baseadas apenas em percepção individual, e não em evidências estruturadas</li>
-      <li>Desgaste institucional progressivo, silencioso e difícil de mensurar</li>
-      <li>Falta de leitura integrada de indicadores humanos e institucionais</li>
-      <li>Riscos que só são percebidos quando já causaram impacto no ambiente e na reputação</li>
-      <li>Ausência de protocolos preventivos formais para antecipação e resposta</li>
-    </ul>
+      <ul class="problem-list">
+        <li>Sinais comportamentais e organizacionais que não são registrados com clareza</li>
+        <li>Decisões baseadas apenas em percepção individual, e não em evidências estruturadas</li>
+        <li>Desgaste institucional progressivo, silencioso e difícil de mensurar</li>
+        <li>Falta de leitura integrada de indicadores humanos e institucionais</li>
+        <li>Riscos que só são percebidos quando já causaram impacto no ambiente e na reputação</li>
+        <li>Ausência de protocolos preventivos formais para antecipação e resposta</li>
+      </ul>
 
-    <div class="problem-transition">
-      <p>
-        <strong>Quando a leitura falha, o impacto aparece.</strong>
-        É nesse ponto que o Pulsar estrutura a resposta.
-      </p>
-    </div>
-
-    <div class="problem-impact-grid">
-      <div class="problem-impact-card">
-        <h3>Impactos para a organização</h3>
-        <ul>
-          <li>Decisões reativas e tardias diante de situações sensíveis</li>
-          <li>Redução da previsibilidade institucional e da capacidade de antecipação</li>
-          <li>Desgaste organizacional silencioso, progressivo e de difícil contenção</li>
-          <li>Riscos reputacionais percebidos apenas após impacto instalado</li>
-        </ul>
+      <div class="problem-transition">
+        <p>
+          <strong>Quando a leitura falha, o impacto aparece.</strong>
+          É nesse ponto que o Pulsar estrutura a resposta.
+        </p>
       </div>
 
-      <div class="problem-impact-card">
-        <h3>Como o Pulsar responde</h3>
-        <ul>
-          <li>Estrutura indicadores institucionais e evidências organizadas</li>
-          <li>Integra sinais humanos e organizacionais em leitura contínua</li>
-          <li>Amplia a capacidade de antecipação e resposta preventiva</li>
-          <li>Orienta decisões com base em inteligência estruturada, e não em percepção isolada</li>
-        </ul>
+      <div class="problem-impact-grid">
+        <div class="problem-impact-card">
+          <h3>Impactos para a organização</h3>
+          <ul>
+            <li>Decisões reativas e tardias diante de situações sensíveis</li>
+            <li>Redução da previsibilidade institucional e da capacidade de antecipação</li>
+            <li>Desgaste organizacional silencioso, progressivo e de difícil contenção</li>
+            <li>Riscos reputacionais percebidos apenas após impacto instalado</li>
+          </ul>
+        </div>
+
+        <div class="problem-impact-card">
+          <h3>Como o Pulsar responde</h3>
+          <ul>
+            <li>Estrutura indicadores institucionais e evidências organizadas</li>
+            <li>Integra sinais humanos e organizacionais em leitura contínua</li>
+            <li>Amplia a capacidade de antecipação e resposta preventiva</li>
+            <li>Orienta decisões com base em inteligência estruturada, e não em percepção isolada</li>
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
-</section>
-	
+  </section>
+
   <!-- O QUE É O PROGRAMA -->
   <section id="sobre" class="sobre-com-fundo section-screen fade-in">
     <div class="container sobre-grid">
@@ -212,15 +219,11 @@
           <p>Fortalece o ambiente escolar, apoia a identificação precoce de vulnerabilidades e contribui para retenção e sustentabilidade institucional.</p>
         </div>
 
-
-
         <div class="connection-item">
           <img src="icon_data.png" alt="Órgãos Públicos">
           <h3>Órgãos Públicos</h3>
           <p>Organiza indicadores institucionais, amplia a capacidade de leitura interna e fortalece a governança de ambientes complexos.</p>
         </div>
-
-
 
         <div class="connection-item">
           <img src="icon_tech.png" alt="Empresas">
@@ -278,58 +281,59 @@
     </div>
   </section>
 
-<section id="instituicoes" class="trust-section section-screen fade-in">
-  <div class="container">
-    <div class="trust-header">
-      <h1>Instituições que já integram a iniciativa Pulsar</h1>
-      <p>Presença institucional em diferentes contextos organizacionais e de impacto social.</p>
+  <section id="instituicoes" class="trust-section section-screen fade-in">
+    <div class="container">
+      <div class="trust-header">
+        <h1>Instituições que já integram a iniciativa Pulsar</h1>
+        <p>Presença institucional em diferentes contextos organizacionais e de impacto social.</p>
+      </div>
+
+      <div class="institutions-showcase">
+        <div class="institutions-seal">
+          <img src="selo-pulsar.png" alt="Participante autorizada do Programa Pulsar">
+        </div>
+
+        <div class="institutions-grid">
+          <div class="institution-card">
+            <img src="logo-instituto-cnp-brasil.png" alt="Instituto CNP Brasil">
+          </div>
+
+          <div class="institution-card">
+            <img src="logo-cebraspe.png" alt="CNP">
+          </div>
+
+          <div class="institution-card">
+            <img src="logo-motorola.png" alt="Motorola">
+          </div>
+
+          <div class="institution-card">
+            <img src="logo-bauducco.png" alt="Bauducco">
+          </div>
+
+          <div class="institution-card">
+            <img src="logo-pg.png" alt="P&G">
+          </div>
+
+          <div class="institution-card institution-card-wide">
+            <img src="logo-ministerio-governo.png" alt="Ministério dos Direitos Humanos e da Cidadania e Governo Federal Brasil">
+          </div>
+
+          <div class="institution-card">
+            <img src="logo-kimberly-clark.png" alt="Kimberly-Clark">
+          </div>
+
+          <div class="institution-card">
+            <img src="logo-perdigao.png" alt="Perdigão">
+          </div>
+        </div>
+
+        <div class="institutions-footnote">
+          <p>Uma iniciativa em construção institucional, com presença em contextos corporativos, sociais e públicos.</p>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <div class="institutions-showcase">
-      <div class="institutions-seal">
-        <img src="selo-pulsar.png" alt="Participante autorizada do Programa Pulsar">
-      </div>
-
-      <div class="institutions-grid">
-        <div class="institution-card">
-          <img src="logo-instituto-cnp-brasil.png" alt="Instituto CNP Brasil">
-        </div>
-
-        <div class="institution-card">
-          <img src="logo-cebraspe.png" alt="CNP">
-        </div>
-
-        <div class="institution-card">
-          <img src="logo-motorola.png" alt="Motorola">
-        </div>
-
-        <div class="institution-card">
-          <img src="logo-bauducco.png" alt="Bauducco">
-        </div>
-
-        <div class="institution-card">
-          <img src="logo-pg.png" alt="P&G">
-        </div>
-
-        <div class="institution-card institution-card-wide">
-          <img src="logo-ministerio-governo.png" alt="Ministério dos Direitos Humanos e da Cidadania e Governo Federal Brasil">
-        </div>
-
-        <div class="institution-card">
-          <img src="logo-kimberly-clark.png" alt="Kimberly-Clark">
-        </div>
-
-        <div class="institution-card">
-          <img src="logo-perdigao.png" alt="Perdigão">
-        </div>
-      </div>
-
-      <div class="institutions-footnote">
-        <p>Uma iniciativa em construção institucional, com presença em contextos corporativos, sociais e públicos.</p>
-      </div>
-    </div>
-  </div>
-</section>
   <!-- VALIDAÇÃO / PROVA -->
   <section id="prova" class="trust-section section-screen fade-in">
     <div class="container">
@@ -348,17 +352,14 @@
       <div class="testimonial-grid">
         <div class="testimonial-card">
           <p>Estruturação de leitura institucional e organização de indicadores aplicados a contextos educacionais voltados ao desenvolvimento socioemocional e prevenção.</p>
-          
         </div>
 
         <div class="testimonial-card">
           <p>Diagnóstico institucional, identificação de vulnerabilidades invisíveis e base inicial para implantação da inteligência preventiva em ambiente educacional parceiro.</p>
-          
         </div>
 
         <div class="testimonial-card">
           <p>O Programa Pulsar já iniciou sua validação institucional. As próximas instituições integrarão o ciclo inicial de expansão e consolidação metodológica.</p>
-          
         </div>
       </div>
     </div>
@@ -369,7 +370,7 @@
     <div class="container">
       <div class="diferencial-header">
         <h2 class="result-title">Resultados esperados com o Pulsar</h2>
-	<p class="giro360-intro">
+        <p class="giro360-intro">
           Uma instituição que enxerga antes, decide melhor.
         </p>
       </div>
@@ -433,5 +434,52 @@
     <span>Fale conosco</span>
     <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp">
   </a>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const menuToggle = document.querySelector('.menu-toggle');
+      const menuNav = document.querySelector('.menu-nav');
+      const menuOverlay = document.querySelector('.menu-overlay');
+      const menuLinks = document.querySelectorAll('.menu-right a');
+
+      if (!menuToggle || !menuNav || !menuOverlay) return;
+
+      function openMenu() {
+        menuNav.classList.add('active');
+        menuOverlay.classList.add('active');
+        menuToggle.classList.add('active');
+        menuToggle.setAttribute('aria-expanded', 'true');
+        document.body.classList.add('menu-open');
+      }
+
+      function closeMenu() {
+        menuNav.classList.remove('active');
+        menuOverlay.classList.remove('active');
+        menuToggle.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        document.body.classList.remove('menu-open');
+      }
+
+      menuToggle.addEventListener('click', function () {
+        if (menuNav.classList.contains('active')) {
+          closeMenu();
+        } else {
+          openMenu();
+        }
+      });
+
+      menuOverlay.addEventListener('click', closeMenu);
+
+      menuLinks.forEach(link => {
+        link.addEventListener('click', closeMenu);
+      });
+
+      window.addEventListener('resize', function () {
+        if (window.innerWidth > 768) {
+          closeMenu();
+        }
+      });
+    });
+  </script>
 </body>
 </html>
