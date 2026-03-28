@@ -26,6 +26,36 @@
         });
       }, { threshold: 0.12 });
       fadeElements.forEach(el => observer.observe(el));
+
+      const menuToggle = document.querySelector('.menu-toggle');
+      const menuNav = document.querySelector('.menu-nav');
+      const menuLinks = document.querySelectorAll('.menu-right a');
+
+      if (menuToggle && menuNav) {
+        menuToggle.addEventListener('click', function () {
+          const isOpen = menuNav.classList.toggle('menu-open');
+          menuToggle.classList.toggle('active', isOpen);
+          menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+
+        menuLinks.forEach(link => {
+          link.addEventListener('click', function () {
+            if (window.innerWidth <= 768) {
+              menuNav.classList.remove('menu-open');
+              menuToggle.classList.remove('active');
+              menuToggle.setAttribute('aria-expanded', 'false');
+            }
+          });
+        });
+
+        window.addEventListener('resize', function () {
+          if (window.innerWidth > 768) {
+            menuNav.classList.remove('menu-open');
+            menuToggle.classList.remove('active');
+            menuToggle.setAttribute('aria-expanded', 'false');
+          }
+        });
+      }
     });
   </script>
 </head>
@@ -35,7 +65,12 @@
   <div class="header-fixed">
     <header class="top-menu">
       <div class="menu-flex">
-        <nav class="menu-nav">
+        <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="menu-nav" id="menu-principal">
           <ul class="menu-right">
             <li><a href="#inicio"><img src="home.png" alt="Início" class="menu-icon">Home</a></li>
             <li><a href="#problema"><img src="icon-desafio.png" alt="Desafio" class="menu-icon">Desafio</a></li>
