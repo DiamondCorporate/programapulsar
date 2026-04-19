@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Programa Pulsar</title>
+  <title>Programa Pulsar | Landing V5</title>
   <meta name="description" content="Programa Pulsar — governança preventiva, inteligência institucional e cuidado humano para escolas e organizações." />
-  <link rel="icon" type="image/png" sizes="64x64" href="favicon_pulsar.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="favicon_pulsar.png" />
+  <link rel="icon" type="image/png" sizes="64x64" href="favicon_pulsar_round.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon_pulsar_round.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -73,7 +73,6 @@
     section[id]{scroll-margin-top:110px}
     #programa{scroll-margin-top:72px}
     #aplicacoes{scroll-margin-top:86px}
-    #nr1{scroll-margin-top:86px}
     #resultados{scroll-margin-top:86px}
     #perguntas{scroll-margin-top:86px}
     #topo-real{scroll-margin-top:0}
@@ -608,180 +607,7 @@
       max-width:980px;
     }
 
-    .nr1{
-      background:linear-gradient(180deg, #f8f3f0 0%, #f5eeeb 100%);
-      border-top:1px solid rgba(47,62,86,.06);
-      border-bottom:1px solid rgba(47,62,86,.06);
-    }
-    .nr1-top{
-      display:grid;
-      grid-template-columns:.96fr .78fr;
-      gap:34px;
-      align-items:center;
-      margin-bottom:28px;
-    }
-    .nr1 .section-head{
-      max-width:none;
-      margin-bottom:0;
-    }
-    .nr1 .section-head h2{
-      font-size:clamp(1.22rem,2.35vw,2.12rem);
-      line-height:.98;
-      letter-spacing:-.04em;
-      max-width:780px;
-      margin-bottom:14px;
-    }
-    .nr1 .section-head p{
-      max-width:760px;
-      color:var(--ink-soft);
-      font-size:1rem;
-    }
-    .nr1-visual{
-      position:relative;
-      min-height:420px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:0 0 0 10px;
-    }
-    .nr1-visual-frame{
-      position:relative;
-      z-index:1;
-      width:min(100%, 430px);
-    }
-    .nr1-visual-frame::before{
-      content:"";
-      position:absolute;
-      inset:-16px 16px 16px -16px;
-      background:#f7eadf;
-      border-top-left-radius:82px;
-      z-index:-2;
-    }
-    .nr1-visual-frame::after{
-      content:"";
-      position:absolute;
-      inset:20px -20px -20px 20px;
-      background:#cfe9e8;
-      border-top-left-radius:82px;
-      z-index:-3;
-    }
-    .nr1-visual-frame img{
-      width:100%;
-      height:auto;
-      display:block;
-      border-top-left-radius:82px;
-      box-shadow:0 12px 32px rgba(47,62,86,.08);
-    }
-    .nr1-grid{
-      display:grid;
-      grid-template-columns:repeat(3,minmax(0,1fr));
-      gap:22px;
-    }
-    .nr1-card{
-      background:#fff;
-      border:1px solid var(--line);
-      padding:24px 22px 22px;
-      min-height:220px;
-    }
-    .nr1-card small{
-      display:block;
-      color:var(--brand);
-      font-weight:700;
-      letter-spacing:.12em;
-      text-transform:uppercase;
-      margin-bottom:12px;
-    }
-    .nr1-card h3{
-      font-size:1.28rem;
-      line-height:1.08;
-      margin-bottom:12px;
-    }
-    .nr1-card p{
-      font-size:.96rem;
-      line-height:1.72;
-      color:var(--ink-soft);
-    }
-    .nr1-fecho{
-      margin:24px auto 0;
-      max-width:860px;
-      text-align:center;
-      color:var(--ink-soft);
-      font-size:.98rem;
-      line-height:1.8;
-    }
-    .nr1-fecho strong{
-      color:var(--title);
-      font-weight:700;
-    }
-
-    @media (max-width: 900px){
-      .nr1-top{
-        grid-template-columns:1fr;
-        gap:22px;
-      }
-      .nr1-visual{
-        min-height:340px;
-        padding:0;
-      }
-      .nr1-visual-frame{
-        width:min(100%, 560px);
-      }
-      .nr1-visual-frame::before{
-        inset:-14px 14px 14px -14px;
-        border-top-left-radius:72px;
-      }
-      .nr1-visual-frame::after{
-        inset:16px -16px -16px 16px;
-        border-top-left-radius:72px;
-      }
-      .nr1-visual-frame img{
-        border-top-left-radius:72px;
-      }
-      .nr1-grid{
-        grid-template-columns:1fr;
-      }
-    }
-
-    @media (max-width: 640px){
-      .nr1-top{
-        gap:18px;
-      }
-      .nr1-visual{
-        min-height:250px;
-      }
-      .nr1-visual-frame{
-        width:100%;
-        max-width:100%;
-      }
-      .nr1-visual-frame::before{
-        inset:-10px 10px 10px -10px;
-        border-top-left-radius:48px;
-      }
-      .nr1-visual-frame::after{
-        inset:12px -12px -12px 12px;
-        border-top-left-radius:48px;
-      }
-      .nr1-visual-frame img{
-        border-top-left-radius:48px;
-      }
-      .nr1-card{
-        min-height:auto;
-        padding:20px 16px 18px;
-      }
-      .nr1-card h3{
-        font-size:1.16rem;
-      }
-      .nr1-card p{
-        font-size:.92rem;
-      }
-      .nr1-fecho{
-        margin-top:18px;
-        font-size:.93rem;
-        line-height:1.75;
-      }
-    }
-
-.program{background:var(--surface-blue);border-top:1px solid rgba(47,62,86,.06);border-bottom:1px solid rgba(47,62,86,.06);padding-top:42px;padding-bottom:72px}
+    .program{background:var(--surface-blue);border-top:1px solid rgba(47,62,86,.06);border-bottom:1px solid rgba(47,62,86,.06);padding-top:42px;padding-bottom:72px}
     .program-grid{display:grid;grid-template-columns:.96fr 1.04fr;gap:40px;align-items:center}
     .program-visual{display:grid;grid-template-columns:.74fr 1fr;gap:22px;align-items:center;align-self:center;padding-top:28px}
     .program-visual img{width:100%;height:100%;object-fit:cover;border:1px solid rgba(47,62,86,.08)}
@@ -1558,6 +1384,7 @@
       .highlight-card:last-child{border-bottom:none}
       .service-card{flex:0 0 calc(80% - 8px)}
       .applications-row{align-items:flex-end}
+      .applications-grid{grid-template-columns:1fr}
       .program-visual{grid-template-columns:1fr 1fr}
       .results-grid{grid-template-columns:1fr}
       .contact-links{grid-template-columns:1fr}
@@ -1588,13 +1415,14 @@
       .container{width:min(var(--container), calc(100% - 22px))}
       .topbar{font-size:.8rem}
       .topbar-inner{min-height:34px}
-      .header-shell{top:34px}
+      .header-shell{top:0}
       .header{min-height:68px}
       .brand img{height:40px}
       :root{--eyebrow-size:.72rem}
       .section-head h2{font-size:1.95rem}
       .desafio-head h2{font-size:1.18rem;line-height:1.02}
       .section-head p,.highlight-card p,.service-card p,.method-card p,.faq-content,.insight-card p{font-size:.95rem;line-height:1.7}
+      .hero.hero-single{padding-top:34px}
       .hero-panel,.hero-track{min-height:730px}
       .hero-copy{padding:34px 16px 78px}
       .hero-media.hero-media-cutout{
@@ -1646,6 +1474,7 @@
       .cta-copy{padding:42px 0}
       .cta-copy h2{font-size:2.35rem}
       .contact{padding-top:42px}
+      .nav-links{inset:68px 0 auto 0}
     }
   
 .site-header{
@@ -1725,7 +1554,6 @@
           <a href="#programa">O Programa</a>
           <a href="#aplicacoes">Aplicações</a>
           <a href="#jornada">Jornada</a>
-          <a href="#nr1">NR-1</a>
           <a href="#validacao">Validação</a>
           <a href="#resultados">Resultados</a>
           <a href="#perguntas">FAQ</a>
@@ -1965,46 +1793,6 @@
       </div>
     </section>
 
-    <section id="nr1" class="nr1">
-      <div class="container">
-        <div class="nr1-top">
-          <div class="section-head">
-            <p class="eyebrow">nr-1 e riscos psicossociais</p>
-            <h2>A prevenção agora exige leitura mais estruturada do ambiente de trabalho.</h2>
-            <p>A atualização da NR-1 amplia a necessidade de identificar, organizar e acompanhar fatores psicossociais relacionados ao trabalho. É justamente aqui que o Pulsar fortalece a governança preventiva: transformando sinais difusos em evidências, indicadores e capacidade institucional de resposta.</p>
-          </div>
-
-          <div class="nr1-visual">
-            <div class="nr1-visual-frame">
-              <img src="nr1.png" alt="Profissional em ambiente organizacional com foco em leitura preventiva e governança" />
-            </div>
-          </div>
-        </div>
-
-        <div class="nr1-grid">
-          <article class="nr1-card">
-            <small>o que mudou</small>
-            <h3>A pauta deixou de ser apenas subjetiva.</h3>
-            <p>A NR-1 reforça a necessidade de tratar fatores psicossociais relacionados ao trabalho dentro da lógica de prevenção, exigindo mais organização, leitura institucional e acompanhamento consistente.</p>
-          </article>
-
-          <article class="nr1-card">
-            <small>o desafio</small>
-            <h3>Muitas instituições percebem o desgaste, mas não conseguem estruturá-lo.</h3>
-            <p>Sobrecarga, tensão, ruídos internos, perda de previsibilidade e fragilidades de ambiente costumam ser sentidos antes de serem formalmente organizados. Sem método, a reação chega tarde.</p>
-          </article>
-
-          <article class="nr1-card">
-            <small>como o pulsar responde</small>
-            <h3>Organiza sinais, evidências, indicadores e protocolos.</h3>
-            <p>O Pulsar ajuda a transformar exigência normativa em capacidade institucional de leitura, monitoramento e ação preventiva, fortalecendo a governança e a qualidade das decisões.</p>
-          </article>
-        </div>
-
-        <p class="nr1-fecho"><strong>Mais do que reagir ao risco, o Pulsar ajuda a instituição a estruturar a prevenção.</strong></p>
-      </div>
-    </section>
-
     <section class="highlights jornada-unificada" id="jornada">
       <div class="container">
         <div class="jornada-top">
@@ -2139,7 +1927,7 @@
 
           <div class="faq-visual">
             <div class="faq-visual-frame">
-              <img src="img_desafios.png" alt="Profissional em postura de escuta, observação e diálogo institucional" />
+              <img src="img_faq.png" alt="Profissional em postura de escuta, observação e diálogo institucional" />
             </div>
           </div>
         </div>
