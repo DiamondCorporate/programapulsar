@@ -73,6 +73,7 @@
     section[id]{scroll-margin-top:110px}
     #programa{scroll-margin-top:72px}
     #aplicacoes{scroll-margin-top:86px}
+    #nr1{scroll-margin-top:86px}
     #resultados{scroll-margin-top:86px}
     #perguntas{scroll-margin-top:86px}
     #topo-real{scroll-margin-top:0}
@@ -826,6 +827,398 @@
     }
 
 
+    .nr1{
+      background:linear-gradient(180deg, #f8f3f0 0%, #f5eeeb 100%);
+      border-top:1px solid rgba(47,62,86,.06);
+      border-bottom:1px solid rgba(47,62,86,.06);
+    }
+    .nr1-top{
+      display:grid;
+      grid-template-columns:.96fr .78fr;
+      gap:34px;
+      align-items:center;
+      margin-bottom:28px;
+    }
+    .nr1 .section-head{
+      max-width:none;
+      margin-bottom:0;
+    }
+    .nr1 .section-head h2{
+      font-size:clamp(1.22rem,2.35vw,2.12rem);
+      line-height:.98;
+      letter-spacing:-.04em;
+      max-width:780px;
+      margin-bottom:14px;
+    }
+    .nr1 .section-head p{
+      max-width:760px;
+      color:var(--ink-soft);
+      font-size:1rem;
+    }
+    .nr1-visual{
+      position:relative;
+      min-height:420px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:0 0 0 10px;
+    }
+    .nr1-visual-frame{
+      position:relative;
+      z-index:1;
+      width:min(100%, 430px);
+    }
+    .nr1-visual-frame::before{
+      content:"";
+      position:absolute;
+      inset:-16px 16px 16px -16px;
+      background:#f7eadf;
+      border-top-left-radius:82px;
+      z-index:-2;
+    }
+    .nr1-visual-frame::after{
+      content:"";
+      position:absolute;
+      inset:20px -20px -20px 20px;
+      background:#cfe9e8;
+      border-top-left-radius:82px;
+      z-index:-3;
+    }
+    .nr1-visual-frame img{
+      width:100%;
+      height:auto;
+      display:block;
+      border-top-left-radius:82px;
+      box-shadow:0 12px 32px rgba(47,62,86,.08);
+    }
+    .nr1-grid{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:22px;
+    }
+    .nr1-card{
+      background:#fff;
+      border:1px solid var(--line);
+      padding:24px 22px 22px;
+      min-height:220px;
+    }
+    .nr1-card small{
+      display:block;
+      color:var(--brand);
+      font-weight:700;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      margin-bottom:12px;
+    }
+    .nr1-card h3{
+      font-size:1.28rem;
+      line-height:1.08;
+      margin-bottom:12px;
+    }
+    .nr1-card p{
+      font-size:.96rem;
+      line-height:1.72;
+      color:var(--ink-soft);
+    }
+    .nr1-fecho{
+      margin:24px auto 0;
+      max-width:860px;
+      text-align:center;
+      color:var(--ink-soft);
+      font-size:.98rem;
+      line-height:1.8;
+    }
+    .nr1-fecho strong{
+      color:var(--title);
+      font-weight:700;
+    }
+
+    @media (max-width: 900px){
+      .nr1-top{
+        grid-template-columns:1fr;
+        gap:22px;
+      }
+      .nr1-visual{
+        min-height:340px;
+        padding:0;
+      }
+      .nr1-visual-frame{
+        width:min(100%, 560px);
+      }
+      .nr1-visual-frame::before{
+        inset:-14px 14px 14px -14px;
+        border-top-left-radius:72px;
+      }
+      .nr1-visual-frame::after{
+        inset:16px -16px -16px 16px;
+        border-top-left-radius:72px;
+      }
+      .nr1-visual-frame img{
+        border-top-left-radius:72px;
+      }
+      .nr1-grid{
+        grid-template-columns:1fr;
+      }
+    }
+
+    @media (max-width: 640px){
+      .nr1-top{
+        gap:18px;
+      }
+      .nr1-visual{
+        min-height:250px;
+      }
+      .nr1-visual-frame{
+        width:100%;
+        max-width:100%;
+      }
+      .nr1-visual-frame::before{
+        inset:-10px 10px 10px -10px;
+        border-top-left-radius:48px;
+      }
+      .nr1-visual-frame::after{
+        inset:12px -12px -12px 12px;
+        border-top-left-radius:48px;
+      }
+      .nr1-visual-frame img{
+        border-top-left-radius:48px;
+      }
+      .nr1-card{
+        min-height:auto;
+        padding:20px 16px 18px;
+      }
+      .nr1-card h3{
+        font-size:1.16rem;
+      }
+      .nr1-card p{
+        font-size:.92rem;
+      }
+      .nr1-fecho{
+        margin-top:18px;
+        font-size:.93rem;
+        line-height:1.75;
+      }
+    }
+
+.program{background:var(--surface-blue);border-top:1px solid rgba(47,62,86,.06);border-bottom:1px solid rgba(47,62,86,.06);padding-top:42px;padding-bottom:72px}
+    .program-grid{display:grid;grid-template-columns:.96fr 1.04fr;gap:40px;align-items:center}
+    .program-visual{display:grid;grid-template-columns:.74fr 1fr;gap:22px;align-items:center;align-self:center;padding-top:28px}
+    .program-visual img{width:100%;height:100%;object-fit:cover;border:1px solid rgba(47,62,86,.08)}
+    .program-visual .small{aspect-ratio: .72/1}
+    .program-visual .large{aspect-ratio: .82/1.08}
+    .program-text h2{font-size:clamp(1.22rem,2.35vw,2.12rem);line-height:.98;letter-spacing:-.04em;margin:0 0 18px;max-width:460px}
+    .program-body{display:grid;gap:18px;max-width:700px}
+    .program-body p{color:var(--ink-soft)}
+    .stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:30px;margin-top:32px;padding-top:24px;border-top:1px solid rgba(47,62,86,.12);grid-column:1 / -1;width:100%}
+    .stat strong{display:block;font-family:"Poppins", Arial, Helvetica, sans-serif;font-size:clamp(2rem,4vw,3rem);color:var(--title);font-weight:500}
+    .stat span{display:block;margin-top:8px;color:var(--ink-soft);font-size:.96rem;max-width:none}
+    .stat span b{display:block;color:var(--title);font-size:1rem;font-weight:600;margin-bottom:6px}
+
+    .method-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .method-card{background:#fff;border:1px solid var(--line);padding:28px 24px;min-height:240px}
+    .method-card small{display:block;color:var(--brand);font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:16px}
+    .method-card h3{font-size:1.45rem;margin-bottom:14px}
+    .method-card p{color:var(--ink-soft);font-size:.96rem}
+
+    .jornada-unificada{
+      padding-top:22px;
+    }
+    .jornada-top{
+      display:grid;
+      grid-template-columns:.82fr 1.18fr;
+      align-items:center;
+      gap:34px;
+      margin:0 0 28px;
+    }
+    .jornada-visual{
+      position:relative;
+      min-height:420px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:0 10px 0 0;
+    }
+    .jornada-visual-frame{
+      position:relative;
+      z-index:1;
+      width:min(100%, 430px);
+    }
+    .jornada-visual-frame::before{
+      content:"";
+      position:absolute;
+      inset:-16px 16px 16px -16px;
+      background:#f7eadf;
+      border-top-left-radius:82px;
+      z-index:-2;
+    }
+    .jornada-visual-frame::after{
+      content:"";
+      position:absolute;
+      inset:20px -20px -20px 20px;
+      background:#cfe9e8;
+      border-top-left-radius:82px;
+      z-index:-3;
+    }
+    .jornada-visual-frame img{
+      width:100%;
+      height:auto;
+      display:block;
+      border-top-left-radius:82px;
+      box-shadow:0 12px 32px rgba(47,62,86,.08);
+    }
+    .jornada-intro{
+      max-width:none;
+      margin:0;
+    }
+    .jornada-intro h2{
+      font-size:clamp(1.45rem,2.8vw,2.35rem);
+      line-height:1.02;
+      margin-bottom:12px;
+      color:var(--title);
+      max-width:720px;
+    }
+    .jornada-intro p{
+      max-width:720px;
+      color:var(--ink-soft);
+      font-size:1rem;
+    }
+    .jornada-fases{
+      display:grid;
+      grid-template-columns:repeat(4,minmax(0,1fr));
+      gap:18px;
+      margin-top:22px;
+    }
+    .jornada-fecho{
+      margin:24px auto 0;
+      max-width:760px;
+      text-align:center;
+    }
+    .jornada-fecho strong{
+      display:block;
+      color:var(--title);
+      font-weight:600;
+      font-size:1.02rem;
+      line-height:1.75;
+    }
+    .jornada-fecho span{
+      display:block;
+      color:var(--ink-soft);
+      font-size:.98rem;
+      line-height:1.8;
+    }
+    .jornada-fase{
+      background:#fff;
+      border:1px solid var(--line);
+      padding:22px 20px;
+      min-height:170px;
+    }
+    .jornada-fase small{
+      display:block;
+      color:var(--brand);
+      font-weight:700;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      margin-bottom:12px;
+    }
+    .jornada-fase h3{
+      font-size:1.22rem;
+      line-height:1.08;
+      margin-bottom:10px;
+    }
+    .jornada-fase p{
+      color:var(--ink-soft);
+      font-size:.94rem;
+      line-height:1.7;
+    }
+
+    @media (max-width: 900px){
+      .jornada-unificada{
+        padding-top:12px;
+      }
+      .jornada-top{
+        grid-template-columns:1fr;
+        gap:22px;
+      }
+      .jornada-visual{
+        min-height:340px;
+        padding:0;
+      }
+      .jornada-visual-frame{
+        width:min(100%, 560px);
+      }
+      .jornada-visual-frame::before{
+        inset:-14px 14px 14px -14px;
+        border-top-left-radius:72px;
+      }
+      .jornada-visual-frame::after{
+        inset:16px -16px -16px 16px;
+        border-top-left-radius:72px;
+      }
+      .jornada-visual-frame img{
+        border-top-left-radius:72px;
+      }
+      .jornada-fases{
+        grid-template-columns:1fr 1fr;
+      }
+    }
+
+    @media (max-width: 640px){
+      .jornada-top{
+        gap:18px;
+      }
+      .jornada-visual{
+        min-height:250px;
+      }
+      .jornada-visual-frame{
+        width:100%;
+        max-width:100%;
+      }
+      .jornada-visual-frame::before{
+        inset:-10px 10px 10px -10px;
+        border-top-left-radius:48px;
+      }
+      .jornada-visual-frame::after{
+        inset:12px -12px -12px 12px;
+        border-top-left-radius:48px;
+      }
+      .jornada-visual-frame img{
+        border-top-left-radius:48px;
+      }
+      .jornada-intro h2{
+        font-size:1.55rem;
+      }
+      .jornada-intro p{
+        font-size:.95rem;
+      }
+      .jornada-fases{
+        grid-template-columns:1fr;
+        gap:14px;
+      }
+      .jornada-fase{
+        min-height:auto;
+        padding:18px 16px;
+      }
+      .jornada-fase h3{
+        font-size:1.12rem;
+      }
+      .jornada-fase p{
+        font-size:.92rem;
+      }
+      .jornada-fecho{
+        margin-top:18px;
+        max-width:100%;
+      }
+      .jornada-fecho strong{
+        font-size:.96rem;
+        line-height:1.7;
+      }
+      .jornada-fecho span{
+        font-size:.93rem;
+        line-height:1.75;
+      }
+    }
+
+
     .faq{
       background:linear-gradient(180deg, #f8f3f0 0%, #f5eeeb 100%);
       border-top:1px solid rgba(47,62,86,.06);
@@ -1298,6 +1691,15 @@
     .field label{display:block;margin-bottom:6px;font-size:.88rem;color:rgba(255,255,255,.78)}
     .field input,.field textarea,.field select{width:100%;background:#11151c;border:1px solid rgba(255,255,255,.12);color:#fff;padding:12px 14px}
     .field textarea{min-height:118px;resize:vertical}
+    .form-status{
+      margin-top:12px;
+      font-size:.92rem;
+      line-height:1.6;
+      display:none;
+    }
+    .form-status.is-visible{display:block}
+    .form-status.is-success{color:#7ee787}
+    .form-status.is-error{color:#ffb4b4}
     .contact-bottom{border-top:1px solid rgba(255,255,255,.08);padding:18px 0;color:rgba(255,255,255,.62);font-size:.9rem;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
     @media (max-width: 1100px){
@@ -1553,6 +1955,7 @@
           <a href="#desafio">Desafio</a>
           <a href="#programa">O Programa</a>
           <a href="#aplicacoes">Aplicações</a>
+          <a href="#nr1">NR-1</a>
           <a href="#jornada">Jornada</a>
           <a href="#validacao">Validação</a>
           <a href="#resultados">Resultados</a>
@@ -1793,6 +2196,46 @@
       </div>
     </section>
 
+    <section id="nr1" class="nr1">
+      <div class="container">
+        <div class="nr1-top">
+          <div class="section-head">
+            <p class="eyebrow">nr-1 e riscos psicossociais</p>
+            <h2>A NR-1 tornou mais clara a necessidade de estruturar a prevenção no ambiente de trabalho.</h2>
+            <p>Quando desgaste, sobrecarga, tensão e perda de previsibilidade não entram numa leitura institucional organizada, a resposta tende a chegar tarde. O Pulsar ajuda a transformar essa nova exigência em governança preventiva, com sinais organizados, indicadores, protocolos e base mais segura para decisão.</p>
+          </div>
+
+          <div class="nr1-visual">
+            <div class="nr1-visual-frame">
+              <img src="nr1.png" alt="Profissional em ambiente organizacional com foco em leitura preventiva e governança" />
+            </div>
+          </div>
+        </div>
+
+        <div class="nr1-grid">
+          <article class="nr1-card">
+            <small>o que mudou</small>
+            <h3>A exigência ficou mais objetiva.</h3>
+            <p>A pauta dos fatores psicossociais ganhou espaço concreto na agenda institucional. Isso exige mais organização, mais leitura estruturada e maior capacidade de acompanhamento preventivo.</p>
+          </article>
+
+          <article class="nr1-card">
+            <small>o desafio</small>
+            <h3>Perceber o desgaste não basta; é preciso organizá-lo.</h3>
+            <p>Muitas instituições sentem o problema antes de compreendê-lo com clareza. Sem método, evidências e rotina de monitoramento, a prevenção fica frágil, difusa e reativa.</p>
+          </article>
+
+          <article class="nr1-card">
+            <small>como o pulsar responde</small>
+            <h3>Transforma exigência em capacidade institucional.</h3>
+            <p>O Pulsar organiza sinais, evidencia padrões, estrutura indicadores e fortalece protocolos preventivos, apoiando decisões mais seguras, antecipatórias e sustentáveis.</p>
+          </article>
+        </div>
+
+        <p class="nr1-fecho"><strong>A NR-1 aumenta a exigência. O Pulsar amplia a capacidade institucional de responder a ela com método, leitura e governança.</strong></p>
+      </div>
+    </section>
+
     <section class="highlights jornada-unificada" id="jornada">
       <div class="container">
         <div class="jornada-top">
@@ -2012,30 +2455,33 @@
       </div>
 
       <div class="contact-form">
-        <form>
+        <form id="contato-form" action="https://formspree.io/f/mzdyvglq" method="POST">
           <div class="form-grid">
             <div class="field">
               <label for="nome">Nome</label>
-              <input id="nome" type="text" placeholder="Seu nome" />
+              <input id="nome" name="nome" type="text" placeholder="Seu nome" required />
             </div>
             <div class="field">
               <label for="instituicao">Instituição</label>
-              <input id="instituicao" type="text" placeholder="Nome da instituição" />
+              <input id="instituicao" name="instituicao" type="text" placeholder="Nome da instituição" required />
             </div>
             <div class="field">
               <label for="email">E-mail</label>
-              <input id="email" type="email" placeholder="Seu e-mail" />
+              <input id="email" name="email" type="email" placeholder="Seu e-mail" required />
             </div>
             <div class="field">
               <label for="telefone">Telefone</label>
-              <input id="telefone" type="tel" placeholder="Seu telefone" />
+              <input id="telefone" name="telefone" type="tel" placeholder="Seu telefone" />
             </div>
             <div class="field full">
               <label for="mensagem">Mensagem</label>
-              <textarea id="mensagem" placeholder="Conte brevemente o desafio institucional que sua organização deseja enfrentar"></textarea>
+              <textarea id="mensagem" name="mensagem" placeholder="Conte brevemente o desafio institucional que sua organização deseja enfrentar" required></textarea>
             </div>
+            <input type="hidden" name="_subject" value="Novo contato pela landing do Programa Pulsar" />
+            <input type="hidden" name="_language" value="pt-BR" />
             <div class="field full">
-              <button type="button" class="btn btn-primary">Receber apresentação</button>
+              <button id="contato-submit" type="submit" class="btn btn-primary">Receber apresentação</button>
+              <div id="contato-status" class="form-status" aria-live="polite"></div>
             </div>
           </div>
         </form>
@@ -2125,6 +2571,51 @@
       }
       tDots.forEach((dot,i)=> dot.addEventListener('click', ()=> showTestimonial(i)));
       setInterval(()=> showTestimonial((tIndex + 1) % testimonials.length), 7000);
+    }
+
+    const contatoForm = document.getElementById('contato-form');
+    const contatoStatus = document.getElementById('contato-status');
+    const contatoSubmit = document.getElementById('contato-submit');
+
+    if (contatoForm && contatoStatus && contatoSubmit){
+      contatoForm.addEventListener('submit', async (event) => {
+        event.preventDefault();
+
+        contatoStatus.className = 'form-status';
+        contatoStatus.textContent = '';
+        contatoSubmit.disabled = true;
+        contatoSubmit.textContent = 'Enviando...';
+
+        try {
+          const response = await fetch(contatoForm.action, {
+            method: 'POST',
+            body: new FormData(contatoForm),
+            headers: { 'Accept': 'application/json' }
+          });
+
+          if (response.ok) {
+            contatoForm.reset();
+            contatoStatus.textContent = 'Mensagem enviada com sucesso. Em breve entraremos em contato.';
+            contatoStatus.className = 'form-status is-visible is-success';
+          } else {
+            let message = 'Não foi possível enviar agora. Tente novamente em instantes.';
+            try {
+              const data = await response.json();
+              if (data && data.errors && data.errors.length) {
+                message = data.errors.map(item => item.message).join(' ');
+              }
+            } catch (e) {}
+            contatoStatus.textContent = message;
+            contatoStatus.className = 'form-status is-visible is-error';
+          }
+        } catch (error) {
+          contatoStatus.textContent = 'Falha de conexão. Verifique sua internet e tente novamente.';
+          contatoStatus.className = 'form-status is-visible is-error';
+        } finally {
+          contatoSubmit.disabled = false;
+          contatoSubmit.textContent = 'Receber apresentação';
+        }
+      });
     }
 
     const menuToggle = document.querySelector('.menu-toggle');
